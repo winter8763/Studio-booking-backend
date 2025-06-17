@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,7 +35,11 @@ import com.example.studio_booking_2.repository.UserRepository;
 import com.example.studio_booking_2.repository.VerificationTokenRepository;
 import com.example.studio_booking_2.security.CustomUserDetails;
 import com.example.studio_booking_2.security.JwtService;
+import com.example.studio_booking_2.service.CaptchaService;
+import com.example.studio_booking_2.service.RecaptchaService;
 import com.example.studio_booking_2.service.UserService;
+
+import jakarta.servlet.http.HttpSession;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -54,6 +59,12 @@ public class AuthController {
     
     @Autowired
     private VerificationTokenRepository tokenRepository;
+    
+    @Autowired
+    private RecaptchaService recaptchaService;
+    
+    @Autowired
+    private CaptchaService captchaService;
 	
 	@PostMapping("/register")
 	public String register(@RequestBody RegisterRequest request) {
@@ -89,9 +100,16 @@ public class AuthController {
 	
 	@PostMapping("/login")
 	public ResponseEntity<?> login(@RequestBody LoginRequest request) {
+		
+		if (!captchaService.validate(request.getCaptchaToken(), request.getCaptcha())) {
+	        return ResponseEntity.badRequest().body(Map.of("message", "驗證碼錯誤"));
+	    }
+
+	    
+		
 	    try {
 	        String token = userService.login(request);
-	        return ResponseEntity.ok(token);
+	        return ResponseEntity.ok(Map.of("token", token));
 	    } catch (ResponseStatusException e) {
 	        return ResponseEntity.status(e.getStatusCode())
 	                             .body(Map.of("message", e.getReason()));
@@ -120,6 +138,13 @@ public class AuthController {
 	    }
 
 	    return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("登入資訊錯誤");
+	}
+	
+	@PutMapping("/update-profile")
+	@PreAuthorize("isAuthenticated()")
+	public ResponseEntity<?> updateProfile(@RequestBody UserDto dto, @AuthenticationPrincipal CustomUserDetails userDetails) {
+	    userService.updateProfile(dto, userDetails.getUsername());
+	    return ResponseEntity.ok("會員資料已更新");
 	}
 
 

@@ -27,5 +27,11 @@ public class StudioRequest {
 	private BigDecimal price;
 
 	private LocalDateTime createAt;
+	
+	private String info;
+	
+	private String notice;
+	
+	private String equipment;
 
 }

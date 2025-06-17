@@ -34,6 +34,7 @@ public class Studio {
 
 	private String imgUrl;
 
+	@Column(name = "is_active", nullable = false)
 	private Boolean isActive;
 
 	@ElementCollection
@@ -48,6 +49,15 @@ public class Studio {
 	private BigDecimal price;
 
 	private LocalDateTime createAt;
+	
+	@Column(columnDefinition = "TEXT")
+	private String info;
+
+	@Column(columnDefinition = "TEXT")
+	private String notice;
+
+	@Column(columnDefinition = "TEXT")
+	private String equipment;
 
 	@PrePersist
 	protected void onCreate() {
@@ -139,4 +149,6 @@ public class Studio {
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
 	}
+	
+	
 } 

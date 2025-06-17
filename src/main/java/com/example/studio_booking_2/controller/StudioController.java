@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.studio_booking_2.dto.StudioDto;
 import com.example.studio_booking_2.dto.StudioRequest;
+import com.example.studio_booking_2.dto.StudioResponse;
 import com.example.studio_booking_2.model.Studio;
 import com.example.studio_booking_2.model.User;
 import com.example.studio_booking_2.repository.StudioRepository;
@@ -30,70 +31,47 @@ public class StudioController {
 	@Autowired
 	private StudioService studioService;
 	
-	@CrossOrigin(origins = "http://localhost:5173")
+	@Autowired
+	private StudioRepository studioRepository;
+	
+	@CrossOrigin(origins = "http://127.0.0.1:5500/")
+	
+	
 	@GetMapping
-	public List<StudioDto> getAllStudios(){
-		return studioService.getAllStudiosIncludingInactive();
+	public List<Studio> getPublicStudios() {
+	    return studioRepository.findByIsActiveTrue(); // ✅ 只回傳 isActive=true 的錄音室
 	}
 	
 	@GetMapping("/{id}")
 	@PreAuthorize("permitAll()")
-	public ResponseEntity<Studio> getStudio(@PathVariable Long id) {
-	    return studioService.getStudioById(id)
-	            .map(ResponseEntity::ok)
-	            .orElse(ResponseEntity.notFound().build());
+	public ResponseEntity<StudioResponse> getStudioById(@PathVariable Long id) {
+	    System.out.println("✅ 接收到 /api/studios/" + id);
+
+	    return studioRepository.findById(id)
+	        .map(studio -> {
+	            StudioResponse response = new StudioResponse();
+	            response.setId(studio.getId());
+	            response.setName(studio.getName());
+	            response.setDescription(studio.getDescription());
+	            response.setImgUrl(studio.getImgUrl());
+	            response.setPrice(studio.getPrice().intValue());
+	            response.setOpenDays(studio.getOpenDays());
+	            response.setOpenStart(studio.getOpenStart().toString());
+	            response.setOpenEnd(studio.getOpenEnd().toString()); // ➜ "HH:mm:ss" 格式
+	            response.setInfo(studio.getInfo());
+	            response.setNotice(studio.getNotice());
+	            response.setEquipment(studio.getEquipment());
+	            return ResponseEntity.ok(response);
+	        })
+	        .orElse(ResponseEntity.notFound().build());
 	}
+
+
 	
-	@GetMapping("/my-studios")
-	@PreAuthorize("hasAuthority('OWNER')")
-	public List<Studio> getMyStudios(Authentication authentication) {
-		return studioService.getStudiosByOwner(authentication);
+	@GetMapping("/{id}/available-dates")
+	public ResponseEntity<List<String>> getAvailableDates(@PathVariable Long id) {
+		List<String> dates = studioService.getAvailableDates(id);
+		return ResponseEntity.ok(dates);
 	}
-	
-	@PostMapping
-	@PreAuthorize("hasAuthority('OWNER')")
-	public ResponseEntity<?> createStudio(
-	    @RequestBody StudioRequest request,
-	    Authentication authentication
-	) {
-	    studioService.createStudio(request, authentication);
-	    return ResponseEntity.ok("錄音室建立成功！");
-	}
-	
-	
-	@PutMapping("/{id}")
-	@PreAuthorize("hasAuthority('OWNER')")
-	public ResponseEntity<Studio> updateStudio(@PathVariable Long id, @RequestBody StudioRequest request, Authentication authentication) {
-		
-		Studio updated = studioService.updateStudio(id, request, authentication);
-		return ResponseEntity.ok(updated);
-	}
-	
-	
-	// 啟用錄音室
-	@PutMapping("/{id}/activate")
-	@PreAuthorize("hasAuthority('OWNER')")
-	public ResponseEntity<String> activateStudio(@PathVariable Long id, Authentication authentication) {
-		studioService.activateStudio(id, authentication);
-		return ResponseEntity.ok("錄音室已啟用");
-	}
-	
-	// 停用錄音室
-	@PutMapping("/{id}/deactivate")
-	@PreAuthorize("hasAuthority('OWNER')")
-	public ResponseEntity<String> deactivateStudio(@PathVariable Long id, Authentication authentication) {
-		studioService.deactivateStudio(id, authentication);
-		return ResponseEntity.ok("錄音室已停用");
-	}
-	
-	// 刪除錄音室（真正從資料庫刪除）
-	@DeleteMapping("/{id}")
-	@PreAuthorize("hasAuthority('OWNER')")
-	public ResponseEntity<String> deleteStudio(@PathVariable Long id, Authentication authentication) {
-		studioService.deleteStudio(id, authentication);
-		return ResponseEntity.ok("錄音室已刪除");
-	}
-	
-	
 
 }

@@ -14,6 +14,7 @@ import org.springframework.web.server.ResponseStatusException;
 import com.example.studio_booking_2.dto.ChangePasswordRequest;
 import com.example.studio_booking_2.dto.LoginRequest;
 import com.example.studio_booking_2.dto.RegisterRequest;
+import com.example.studio_booking_2.dto.UserDto;
 import com.example.studio_booking_2.model.PasswordResetToken;
 import com.example.studio_booking_2.model.User;
 import com.example.studio_booking_2.model.User.Role;
@@ -87,12 +88,12 @@ public class UserService {
 
 	
 	public String login(LoginRequest request) {
-	    System.out.println("🔍 嘗試登入帳號：" + request.getEmail());
+	    System.out.println("🔍 嘗試登入帳號：" + request.getUsername());
 	    
-	    User user = userRepository.findByEmail(request.getEmail())
+	    User user = userRepository.findByEmail(request.getUsername())
 	                .orElseThrow(() -> new RuntimeException("帳號不存在"));
 	    
-	    System.out.println("✅ 找到帳號：" + user.getEmail());
+	    System.out.println("✅ 找到帳號：" + user.getUsername());
 
 	    if (!Boolean.TRUE.equals(user.isVerified())) {
 	        throw new ResponseStatusException(HttpStatus.FORBIDDEN, "帳號尚未驗證");
@@ -101,9 +102,20 @@ public class UserService {
 	    if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
 	        throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "密碼錯誤");
 	    }
+	    System.out.println("登入者角色：" + user.getRole());
 
 	    return jwtService.generateToken(user);
 	}
+	
+	public void updateProfile(UserDto dto, String email) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("找不到使用者"));
+
+        // 僅更新名字
+        user.setName(dto.getName());
+
+        userRepository.save(user);
+    }
 
 	
 	public void changePassword(String email, ChangePasswordRequest request) {

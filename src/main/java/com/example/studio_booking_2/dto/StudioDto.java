@@ -20,6 +20,9 @@ public class StudioDto {
     private LocalTime openStart;
     private LocalTime openEnd;
     private BigDecimal price;
+    private String info;
+    private String notice;
+    private String equipment;
 
     public StudioDto(Studio studio) {
         this.id = studio.getId();
@@ -31,6 +34,9 @@ public class StudioDto {
         this.openStart = studio.getOpenStart();
         this.openEnd = studio.getOpenEnd();
         this.price = studio.getPrice();
+        this.info = studio.getInfo();
+        this.notice = studio.getNotice();
+        this.equipment = studio.getEquipment();
     }
 
 }

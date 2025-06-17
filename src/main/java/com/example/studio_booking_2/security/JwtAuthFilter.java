@@ -31,6 +31,14 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                                     HttpServletResponse response,
                                     FilterChain filterChain)
             throws ServletException, IOException {
+    	
+    	// 白名單：這些路徑不需要 JWT 驗證
+    	String path = request.getServletPath();
+    	System.out.println("🚨 目前請求路徑：" + path); // 印出請求網址路徑
+    	if ("/api/admin/login".equals(path) || "/api/auth/login".equals(path)) {
+    	    filterChain.doFilter(request, response);
+    	    return;
+    	}
 
         final String authHeader = request.getHeader("Authorization");
 
@@ -56,15 +64,20 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                     userDetails, null, userDetails.getAuthorities()
                 );
                 authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+                System.out.println("✅ 權限清單：" + userDetails.getAuthorities());
+                System.out.println("✅ 成功設置 SecurityContextHolder 為：" + email);
                 SecurityContextHolder.getContext().setAuthentication(authToken);
 
                 System.out.println("✅ 驗證成功，登入使用者：" + email);
+                
             } else {
                 System.out.println("⚠️ 找不到使用者：" + email);
             }
         } else if (email == null) {
             System.out.println("⚠️ 無法從 JWT 中解析 email");
         }
+        
+        
 
         filterChain.doFilter(request, response);
     }

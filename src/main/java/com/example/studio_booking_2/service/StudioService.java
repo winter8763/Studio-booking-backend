@@ -1,8 +1,11 @@
 package com.example.studio_booking_2.service;
 
 import java.text.Collator;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +16,7 @@ import com.example.studio_booking_2.dto.StudioDto;
 import com.example.studio_booking_2.dto.StudioRequest;
 import com.example.studio_booking_2.model.Studio;
 import com.example.studio_booking_2.model.User;
+import com.example.studio_booking_2.repository.ReservationRepository;
 import com.example.studio_booking_2.repository.StudioRepository;
 import com.example.studio_booking_2.repository.UserRepository;
 
@@ -24,6 +28,9 @@ public class StudioService {
 	
 	@Autowired
 	private UserRepository userRepository;
+	
+	@Autowired
+	private ReservationRepository reservationRepository;
 	
 	public List<StudioDto> getAllStudiosIncludingInactive() {
 		return studioRepository.findAll().stream()
@@ -46,6 +53,9 @@ public class StudioService {
 		studio.setOpenStart(request.getOpenStart());
 		studio.setOpenEnd(request.getOpenEnd());
 		studio.setOwner(owner);
+		studio.setInfo(request.getInfo());
+		studio.setNotice(request.getNotice());
+		studio.setEquipment(request.getEquipment());
 		
 		studioRepository.save(studio);
 	}
@@ -62,12 +72,20 @@ public class StudioService {
 		return studioRepository.findByOwner(owner);
 	}
 	
+	public Optional<StudioDto> getStudioByIdForOwner(Long id, String email) {
+	    return studioRepository.findById(id)
+	            .map(StudioDto::new);
+	}
+	
 	public Studio updateStudio(Long id, StudioRequest request, Authentication authentication) {
 		Studio studio = studioRepository.findById(id)
 				.orElseThrow(() -> new RuntimeException("Studio not found"));
 		
 		if(!studio.getOwner().getEmail().equals(authentication.getName())) {
 			throw new RuntimeException("無權操作此錄音室");
+		}
+		if (request.getIsActive() != null) {
+		    studio.setIsActive(request.getIsActive());
 		}
 				
 		studio.setName(request.getName());
@@ -78,6 +96,9 @@ public class StudioService {
 		studio.setOpenStart(request.getOpenStart());
 		studio.setOpenEnd(request.getOpenEnd());
 		studio.setPrice(request.getPrice());
+	    studio.setInfo(request.getInfo());
+	    studio.setNotice(request.getNotice());
+	    studio.setEquipment(request.getEquipment());
 		
 		return studioRepository.save(studio);
 		
@@ -92,6 +113,38 @@ public class StudioService {
 
 	    return studio;
 	}
+	
+	public List<String> getAvailableDates(Long studioId) {
+        Studio studio = studioRepository.findById(studioId).orElseThrow();
+
+        List<Integer> openDays = studio.getOpenDays(); // 0=週日, ..., 6=週六
+
+        // 設定查詢範圍：從今天起算 14 天
+        LocalDate today = LocalDate.now();
+        LocalDate endDate = today.plusDays(14);
+
+        // 把已經有預約的日期查出來
+        List<LocalDate> reservedDates = reservationRepository
+                .findDistinctDateByStudioId(studioId);
+        Set<String> reservedSet = reservedDates.stream()
+                .map(LocalDate::toString) // yyyy-MM-dd
+                .collect(Collectors.toSet());
+
+        // 過濾出開放日、且沒有被預約的日期
+        List<String> availableDates = new ArrayList<>();
+
+        for (LocalDate date = today; !date.isAfter(endDate); date = date.plusDays(1)) {
+            int dayOfWeek = date.getDayOfWeek().getValue() % 7; // 週一=1 → 1, 週日=7 → 0
+            if (openDays.contains(dayOfWeek)) {
+                String formatted = date.toString(); // yyyy-MM-dd
+                if (!reservedDates.contains(formatted)) {
+                    availableDates.add(formatted);
+                }
+            }
+        }
+
+        return availableDates;
+    }
 	
 	// 關閉錄音室
 	public void deactivateStudio(Long id, Authentication authentication) {

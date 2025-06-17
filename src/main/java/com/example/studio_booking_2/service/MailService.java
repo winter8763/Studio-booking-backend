@@ -50,6 +50,22 @@ public class MailService {
 			throw new RuntimeException("寄送email失敗:" + e.getMessage());
 		}
 	}
+	
+	public void sendReservationConfirmation(String to, String subject, String content) {
+	    try {
+	        MimeMessage message = mailSender.createMimeMessage();
+	        MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
+
+	        helper.setTo(to);
+	        helper.setFrom("yirou419lin@gmail.com", "錄音室預約確認"); // 寄件人與名稱
+	        helper.setSubject(subject);
+	        helper.setText(content, true); // 第二個參數 true 表示內容為 HTML
+
+	        mailSender.send(message);
+	    } catch (Exception e) {
+	        throw new RuntimeException("寄送預約確認信失敗：" + e.getMessage());
+	    }
+	}
 
 }
 

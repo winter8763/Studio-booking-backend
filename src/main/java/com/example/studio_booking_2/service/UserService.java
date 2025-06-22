@@ -132,9 +132,14 @@ public class UserService {
 		userRepository.save(user);
 	}
 	
+	@Transactional
 	public void forgotPassword(String email) {
 		User user = userRepository.findByEmail(email)
 					.orElseThrow(() -> new RuntimeException("找不到該信箱"));
+	
+	    // 這行必須真的成功執行
+	    passwordResetTokenRepository.deleteByUserId(user.getId());
+		
 		
 		// 產生 Token
 		String token = UUID.randomUUID().toString();
@@ -145,8 +150,10 @@ public class UserService {
 		resetToken.setExpiryTime(LocalDateTime.now().plusMinutes(30));
 		passwordResetTokenRepository.save(resetToken);
 		
+		
+		
 		// 發送 email (你可自訂連結)
-		String link = "http://localhost:5173/reset-password?token=" + token;
+		String link = "http://127.0.0.1:5500/reset-password.html?token=" + token;
 		mailService.sendEmail(user.getEmail(), "重設密碼連結",
 				"<p>請點選以下連結來重設您的密碼：</p>" +
 				"<a href=\"" + link + "\">重設密碼</a>");
@@ -165,8 +172,10 @@ public class UserService {
 	    user.setPassword(passwordEncoder.encode(newPassword));
 	    userRepository.save(user);
 
-	    passwordResetTokenRepository.delete(tokenEntity); // 清掉 token 避免重複使用
-
+	    passwordResetTokenRepository.delete(tokenEntity);
+	    user.setPassword(passwordEncoder.encode(newPassword));
+	    userRepository.save(user);
+	    
 	    return user; // ✅ 回傳給 Controller 用來產生 JWT
 	}
 
@@ -188,7 +197,7 @@ public class UserService {
 		newToken.setExpiryTime(LocalDateTime.now().plusMinutes(30));
 		tokenRepository.save(newToken);
 		
-		String url = "http://localhost:5173/verify?token=" + newToken.getToken();
+		String url = "http://127.0.0.1:5500/verify-pending.html?token=" + newToken.getToken();
 		mailService.sendVerificationEmail(user.getEmail(), url);
 	}
 	
@@ -196,28 +205,28 @@ public class UserService {
 	public void resendResetPassewordToken(String email) {
 		User user = userRepository.findByEmail(email)
 				.orElseThrow(() -> new RuntimeException("查無此帳號，請確認 Email 是否正確"));
-		
-		if(!user.isVerified()) {
+
+		if (!user.isVerified()) {
 			throw new RuntimeException("帳號尚未驗證，無法重設密碼");
 		}
-		
-		// 刪除舊的重設 Token
-		passwordResetTokenRepository.deleteByUser(user);
-		
+
+		// ✅ 用 userId 更保險
+		passwordResetTokenRepository.deleteByUserId(user.getId());
+
 		PasswordResetToken newToken = new PasswordResetToken();
 		newToken.setToken(UUID.randomUUID().toString());
 		newToken.setUser(user);
 		newToken.setExpiryTime(LocalDateTime.now().plusMinutes(30));
 		passwordResetTokenRepository.save(newToken);
-		
-		String resetUrl = "http://localhost:5173/api/auth/reset-password?token=" + newToken.getToken();
-		
+
+		String resetUrl = "http://127.0.0.1:5500/reset-password.html?token=" + newToken.getToken();
+
 		mailService.sendEmail(user.getEmail(),
-							  "【錄音室預約系統】新的重設密碼連結",
-							  "<p>這是您新的密碼重設連結（30 分鐘內有效）：</p>" +
-							  "<a href=\"" + resetUrl + "\">點擊重設密碼</a>"
-							  );
+				"【錄音室預約系統】新的重設密碼連結",
+				"<p>這是您新的密碼重設連結（30 分鐘內有效）：</p>" +
+				"<a href=\"" + resetUrl + "\">點擊重設密碼</a>");
 	}
+
 	
 	public void promoteToOwner(String email) {
 		User user = userRepository.findByEmail(email)

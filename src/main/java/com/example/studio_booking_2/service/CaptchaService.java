@@ -19,8 +19,8 @@ public class CaptchaService {
     // 驗證並刪除
     public boolean validate(String token, String input) {
         String real = captchaStore.get(token);
-        if (real != null && real.equals(input.toLowerCase())) {
-            captchaStore.remove(token);
+        if (real != null && real.equalsIgnoreCase(input)) {
+            captchaStore.remove(token); // 驗證成功後移除 token
             return true;
         }
         return false;

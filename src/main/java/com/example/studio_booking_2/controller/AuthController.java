@@ -100,25 +100,38 @@ public class AuthController {
 	
 	@PostMapping("/login")
 	public ResponseEntity<?> login(@RequestBody LoginRequest request) {
-		
-		if (!captchaService.validate(request.getCaptchaToken(), request.getCaptcha())) {
+
+	    // ✅ 驗證驗證碼
+	    if (!captchaService.validate(request.getCaptchaToken(), request.getCaptcha())) {
 	        return ResponseEntity.badRequest().body(Map.of("message", "驗證碼錯誤"));
 	    }
 
-	    
-		
 	    try {
+	        // ✅ 嘗試登入並取得 JWT
 	        String token = userService.login(request);
+
+	        // ✅ 根據 email 取出使用者角色
+	        User user = userRepository.findByEmail(request.getUsername())
+	                .orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED, "找不到帳號"));
+
+	        // ✅ 僅允許 MEMBER 登入此 API
+	        if (!user.getRole().name().equals("MEMBER")) {
+	            return ResponseEntity.status(HttpStatus.FORBIDDEN)
+	                    .body(Map.of("message", "請從專屬頁面登入"));
+	        }
+
 	        return ResponseEntity.ok(Map.of("token", token));
+
 	    } catch (ResponseStatusException e) {
 	        return ResponseEntity.status(e.getStatusCode())
 	                             .body(Map.of("message", e.getReason()));
 	    } catch (Exception e) {
-	        e.printStackTrace(); // ✅ 加上這行 log 詳細錯誤
+	        e.printStackTrace(); // ✅ log 詳細錯誤
 	        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
 	                             .body(Map.of("message", "登入發生錯誤"));
 	    }
 	}
+
 
 
 

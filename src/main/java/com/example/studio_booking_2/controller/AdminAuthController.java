@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class AdminAuthController {
 
+	// final 屬性是用來搭配建構式注入的
     private final AuthenticationManager authenticationManager;
     private final UserRepository userRepository;
     private final JwtService jwtService;
@@ -48,7 +49,7 @@ public class AdminAuthController {
         }
     }
 
-    // 內部類別（或可放在 dto 資料夾）
+    // 建立簡潔的資料傳輸物DTO
     public record LoginRequest(String email, String password) {}
     public record LoginResponse(String token) {}
 }

@@ -18,8 +18,6 @@ public class PaymentController {
 	@Autowired
 	private PaymentRepository paymentRepository;
 	
-//	public record PaymentOption(Long id, String method) {}
-	
 	@GetMapping
 	public List<PaymentOption> getAllPayments() {
 		List<Payment> payments = paymentRepository.findAll();
@@ -27,8 +25,8 @@ public class PaymentController {
 
 		return paymentRepository.findAll()
 				.stream()
-				.filter(p -> p.getMethod() != null)
-				.map(p -> new PaymentOption(p.getId(), p.getName(), p.getMethod()))
+				.filter(p -> p.getMethod() != null) //過濾掉沒有付款方式（method 為 null）的資料
+				.map(p -> new PaymentOption(p.getId(), p.getName(), p.getMethod())) //把每筆資料轉成 PaymentOption 這個 DTO
 				.toList();
 	}
 

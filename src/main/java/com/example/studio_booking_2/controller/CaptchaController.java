@@ -31,40 +31,20 @@ public class CaptchaController {
     
     @Autowired
     private CaptchaService captchaService;
-
-    @GetMapping("/image")
-    public void getCaptcha(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String captchaText = producer.createText();
-        request.getSession().setAttribute("captcha", captchaText.toLowerCase());
-
-        BufferedImage image = producer.createImage(captchaText);
-
-        response.setContentType("image/jpeg");
-        response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
-        response.setHeader("Pragma", "no-cache");
-        response.setDateHeader("Expires", 0);
-        
-        System.out.println("🎯 Captcha 設定成功：" + captchaText);
-
-        ServletOutputStream out = response.getOutputStream();
-        ImageIO.write(image, "jpg", out);
-        out.flush();
-        out.close();
-        
-
-        
-    }
     
     @GetMapping("/token")
     public ResponseEntity<?> generateCaptcha() throws IOException {
         String text = producer.createText();
         String token = UUID.randomUUID().toString();
         captchaService.saveCaptcha(token, text);
-
+        
+        //把剛剛產生的驗證碼文字轉成圖片（BufferedImage），然後寫入 byte array，最後編碼成 Base64 字串，這樣前端可以直接顯示這張圖片
         BufferedImage image = producer.createImage(text);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         ImageIO.write(image, "jpg", baos);
         String base64 = Base64.getEncoder().encodeToString(baos.toByteArray());
+        
+        System.out.println("🎯 Captcha 設定成功：" + text);
 
         return ResponseEntity.ok(Map.of(
             "token", token,

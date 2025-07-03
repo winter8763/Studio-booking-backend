@@ -6,8 +6,6 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.example.studio_booking_2.dto.ReservationRequest;
 import com.example.studio_booking_2.dto.ReservationResponse;
@@ -41,11 +39,9 @@ public class ReservationService {
 	@Autowired
 	private PaymentRepository paymentRepository;
 	
-	private static final Logger log = LoggerFactory.getLogger(ReservationService.class);
-	
     public Reservation createReservation(ReservationRequest req, String username) {
     	
-    	System.out.println("🔍 傳入的 username = " + username);
+    	System.out.println("傳入的 username = " + username);
 
         User user = userRepository.findByEmail(username)
                 .orElseThrow(() -> new RuntimeException("找不到使用者"));
@@ -110,7 +106,7 @@ public class ReservationService {
 
 	    return reservationRepository.findByUserIdWithPaymentOrderByDateDesc(user.getId())
 	        .stream()
-	        .map(r -> ReservationResponse.builder()
+	        .map(r -> ReservationResponse.builder() //用 builder 模式（建構器）建立物件
 	            .id(r.getId())
 	            .date(r.getDate())
 	            .startTime(r.getStartTime())
@@ -122,7 +118,7 @@ public class ReservationService {
 	            .paymentName(r.getPayment() != null ? r.getPayment().getName() : null)
 	            .build()
 	        )
-	        .collect(Collectors.toList()); // ✅ 重點在這
+	        .collect(Collectors.toList());
 	}
 	
 	public void cancelReservation(Long reservationId, String email) {

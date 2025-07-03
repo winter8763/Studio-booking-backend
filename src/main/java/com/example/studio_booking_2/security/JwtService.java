@@ -14,10 +14,11 @@ import io.jsonwebtoken.security.Keys;
 @Service
 public class JwtService {
 	
-	private final String secretKey = "12345678901234567890123456789012"; // 32位元長度以上
+	private final String secretKey = "12345678901234567890123456789012"; //JWT 的加密金鑰
 	
 	private final long expiration = 1000*60*60; // 1小時
 	
+	//將 secretKey 字串轉成一個符合 JWT 要求的金鑰格式，用來簽名或驗證 JWT
 	private Key getSignKey() {
 		return Keys.hmacShaKeyFor(secretKey.getBytes());
 		

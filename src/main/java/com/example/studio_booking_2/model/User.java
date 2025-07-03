@@ -60,13 +60,13 @@ public class User implements UserDetails{
 		OWNER;
 	}
 	
-    // ✅ 實作權限回傳方法
+    // 實作 Spring Security 的 UserDetails 介面中 getAuthorities() 方法
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.name()));
     }
 
-    // ✅ 使用 email 作為帳號識別
+    // 使用 email 作為帳號識別
     @Override
     public String getUsername() {
         return email;

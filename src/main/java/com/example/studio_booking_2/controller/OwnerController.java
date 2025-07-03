@@ -36,10 +36,10 @@ public class OwnerController {
 	
 	
 	@GetMapping("/studios")
-	@PreAuthorize("hasRole('OWNER')") // ✅ 限 OWNER 可用
+	@PreAuthorize("hasRole('OWNER')") //限 OWNER 可用
 	public List<Studio> getAllStudiosForOwner(Authentication auth) {
-		System.out.println("🧪 已進入 OWNER Studios API：使用者=" + auth.getName());
-	    return studioRepository.findAll(); // ✅ 回傳全部錄音室（包含 isActive=false）
+		System.out.println(" 已進入 OWNER Studios API：使用者=" + auth.getName());
+	    return studioRepository.findAll(); // 回傳全部錄音室（包含 isActive=false）
 	}
 	
 	@GetMapping("/studios/{id}")
@@ -76,7 +76,7 @@ public class OwnerController {
 	@PreAuthorize("hasRole('OWNER')")
 	public ResponseEntity<String> activateStudio(@PathVariable Long id, Authentication authentication) {
 		studioService.activateStudio(id, authentication);
-		System.out.println("✅ 收到啟用請求：" + id);
+		System.out.println("收到啟用請求：" + id);
 		return ResponseEntity.ok("錄音室已啟用");
 	}
 	
@@ -85,7 +85,7 @@ public class OwnerController {
 	@PreAuthorize("hasRole('OWNER')")
 	public ResponseEntity<String> deactivateStudio(@PathVariable Long id, Authentication authentication) {
 		studioService.deactivateStudio(id, authentication);
-		System.out.println("✅ 收到停用請求：" + id);
+		System.out.println("收到停用請求：" + id);
 		return ResponseEntity.ok("錄音室已停用");
 	}
 	

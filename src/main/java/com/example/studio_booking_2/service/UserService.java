@@ -80,7 +80,7 @@ public class UserService {
 	    );
 	    tokenRepository.save(verificationToken);
 
-	    String verificationUrl = "http://localhost:5173/verify?token=" + token;
+	    String verificationUrl = "http://127.0.0.1:5500/verify?token=" + token;
 	    mailService.sendVerificationEmail(user.getEmail(), verificationUrl);
 
 	    return ResponseEntity.ok("註冊成功，請查收驗證信");
@@ -106,16 +106,6 @@ public class UserService {
 
 	    return jwtService.generateToken(user);
 	}
-	
-	public void updateProfile(UserDto dto, String email) {
-        User user = userRepository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("找不到使用者"));
-
-        // 僅更新名字
-        user.setName(dto.getName());
-
-        userRepository.save(user);
-    }
 
 	
 	public void changePassword(String email, ChangePasswordRequest request) {
@@ -127,7 +117,7 @@ public class UserService {
 			throw new RuntimeException("舊密碼錯誤");
 		}
 		
-		// 設定新密碼（記得加密）
+		// 設定新密碼
 		user.setPassword(passwordEncoder.encode(request.getNewPassword()));
 		userRepository.save(user);
 	}
@@ -137,7 +127,6 @@ public class UserService {
 		User user = userRepository.findByEmail(email)
 					.orElseThrow(() -> new RuntimeException("找不到該信箱"));
 	
-	    // 這行必須真的成功執行
 	    passwordResetTokenRepository.deleteByUserId(user.getId());
 		
 		
@@ -152,7 +141,7 @@ public class UserService {
 		
 		
 		
-		// 發送 email (你可自訂連結)
+		// 發送 email
 		String link = "http://127.0.0.1:5500/reset-password.html?token=" + token;
 		mailService.sendEmail(user.getEmail(), "重設密碼連結",
 				"<p>請點選以下連結來重設您的密碼：</p>" +
@@ -176,7 +165,7 @@ public class UserService {
 	    user.setPassword(passwordEncoder.encode(newPassword));
 	    userRepository.save(user);
 	    
-	    return user; // ✅ 回傳給 Controller 用來產生 JWT
+	    return user; //回傳給 Controller 用來產生 JWT
 	}
 
 	@Transactional
@@ -210,7 +199,6 @@ public class UserService {
 			throw new RuntimeException("帳號尚未驗證，無法重設密碼");
 		}
 
-		// ✅ 用 userId 更保險
 		passwordResetTokenRepository.deleteByUserId(user.getId());
 
 		PasswordResetToken newToken = new PasswordResetToken();
@@ -251,7 +239,7 @@ public class UserService {
 //		owner.setBanned(false);
 //		
 //		userRepository.save(owner);
-//		System.out.println("✅ 預設 OWNER 帳號建立完成：winter8763@gmail.com / owner123");
+//		System.out.println("預設 OWNER 帳號建立完成：winter8763@gmail.com / owner123");
 //	}
 	
 	

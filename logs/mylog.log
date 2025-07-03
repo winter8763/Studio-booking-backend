@@ -1,0 +1,350 @@
+2025-07-04T00:08:54.233+08:00  WARN 38921 --- [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m23s549ms).
+2025-07-04T00:20:52.093+08:00  WARN 38921 --- [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m27s820ms).
+2025-07-04T00:36:51.193+08:00  WARN 38921 --- [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m59s100ms).
+2025-07-04T00:51:50.064+08:00  WARN 38921 --- [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m28s865ms).
+2025-07-04T01:09:35.823+08:00  WARN 38921 --- [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m45s759ms).
+2025-07-04T01:40:14.956+08:00  WARN 38921 --- [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m15s334ms).
+2025-07-04T01:50:02.701+08:00  WARN 38921 --- [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s182ms).
+2025-07-04T01:51:42.586+08:00  WARN 38921 --- [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s676ms).
+2025-07-04T01:53:13.013+08:00  WARN 38921 --- [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s681ms).
+2025-07-04T02:04:09.847+08:00  WARN 38921 --- [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m33s866ms).
+2025-07-04T02:04:39.217+08:00  INFO 38921 --- [RMI TCP Connection(143)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-04T02:04:39.223+08:00  INFO 38921 --- [RMI TCP Connection(143)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-04T02:04:39.226+08:00  INFO 38921 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-04T02:04:39.233+08:00  INFO 38921 --- [RMI TCP Connection(143)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-04T02:04:39.236+08:00  INFO 38921 --- [RMI TCP Connection(143)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-04T02:04:39.238+08:00  INFO 38921 --- [RMI TCP Connection(143)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-04T02:05:27.033+08:00  INFO 42047 --- [main] c.e.s.StudioBooking2Application          : Starting StudioBooking2Application using Java 21.0.6 with PID 42047 (/Users/linyirou/eclipse-projects/studio-booking-2/target/classes started by linyirou in /Users/linyirou/eclipse-projects/studio-booking-2)
+2025-07-04T02:05:27.034+08:00  INFO 42047 --- [main] c.e.s.StudioBooking2Application          : No active profile set, falling back to 1 default profile: "default"
+2025-07-04T02:05:27.338+08:00  INFO 42047 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-04T02:05:27.371+08:00  INFO 42047 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 6 JPA repository interfaces.
+2025-07-04T02:05:27.640+08:00  INFO 42047 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-04T02:05:27.648+08:00  INFO 42047 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-04T02:05:27.648+08:00  INFO 42047 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-04T02:05:27.668+08:00  INFO 42047 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-04T02:05:27.668+08:00  INFO 42047 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 616 ms
+2025-07-04T02:05:27.736+08:00  INFO 42047 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-04T02:05:27.768+08:00  INFO 42047 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-07-04T02:05:27.784+08:00  INFO 42047 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-04T02:05:27.911+08:00  INFO 42047 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-04T02:05:27.925+08:00  INFO 42047 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-04T02:05:28.006+08:00  INFO 42047 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@32d22650
+2025-07-04T02:05:28.007+08:00  INFO 42047 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-04T02:05:28.039+08:00  WARN 42047 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-04T02:05:28.040+08:00  WARN 42047 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-04T02:05:28.048+08:00  INFO 42047 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-04T02:05:28.454+08:00  INFO 42047 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-04T02:05:28.530+08:00  INFO 42047 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-04T02:05:28.751+08:00  INFO 42047 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-07-04T02:05:28.770+08:00  INFO 42047 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-04T02:05:29.152+08:00  WARN 42047 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-04T02:05:29.334+08:00 DEBUG 42047 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-07-04T02:05:29.489+08:00  INFO 42047 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-04T02:05:29.494+08:00  INFO 42047 --- [main] c.e.s.StudioBooking2Application          : Started StudioBooking2Application in 2.643 seconds (process running for 3.001)
+2025-07-04T02:05:32.398+08:00  INFO 42047 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-04T02:05:32.399+08:00  INFO 42047 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-04T02:05:32.399+08:00  INFO 42047 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-07-04T02:05:32.409+08:00 DEBUG 42047 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/captcha/token
+2025-07-04T02:05:32.423+08:00 DEBUG 42047 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/captcha/token
+2025-07-04T02:05:33.118+08:00 DEBUG 42047 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-04T02:13:41.166+08:00  INFO 42047 --- [RMI TCP Connection(15)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-04T02:13:41.174+08:00  INFO 42047 --- [RMI TCP Connection(15)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-04T02:13:41.177+08:00  INFO 42047 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-04T02:13:41.183+08:00  INFO 42047 --- [RMI TCP Connection(15)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-04T02:13:41.186+08:00  INFO 42047 --- [RMI TCP Connection(15)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-04T02:13:41.193+08:00  INFO 42047 --- [RMI TCP Connection(15)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-04T02:13:46.513+08:00  INFO 42213 --- [main] c.e.s.StudioBooking2Application          : Starting StudioBooking2Application using Java 21.0.6 with PID 42213 (/Users/linyirou/eclipse-projects/studio-booking-2/target/classes started by linyirou in /Users/linyirou/eclipse-projects/studio-booking-2)
+2025-07-04T02:13:46.514+08:00  INFO 42213 --- [main] c.e.s.StudioBooking2Application          : No active profile set, falling back to 1 default profile: "default"
+2025-07-04T02:13:46.802+08:00  INFO 42213 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-04T02:13:46.834+08:00  INFO 42213 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 6 JPA repository interfaces.
+2025-07-04T02:13:47.095+08:00  INFO 42213 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-04T02:13:47.103+08:00  INFO 42213 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-04T02:13:47.103+08:00  INFO 42213 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-04T02:13:47.123+08:00  INFO 42213 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-04T02:13:47.123+08:00  INFO 42213 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 589 ms
+2025-07-04T02:13:47.195+08:00  INFO 42213 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-04T02:13:47.218+08:00  INFO 42213 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-07-04T02:13:47.233+08:00  INFO 42213 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-04T02:13:47.347+08:00  INFO 42213 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-04T02:13:47.359+08:00  INFO 42213 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-04T02:13:47.432+08:00  INFO 42213 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77856cc5
+2025-07-04T02:13:47.433+08:00  INFO 42213 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-04T02:13:47.454+08:00  WARN 42213 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-04T02:13:47.455+08:00  WARN 42213 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-04T02:13:47.462+08:00  INFO 42213 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-04T02:13:47.859+08:00  INFO 42213 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-04T02:13:47.914+08:00  INFO 42213 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-04T02:13:48.129+08:00  INFO 42213 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-07-04T02:13:48.149+08:00  INFO 42213 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-04T02:13:48.524+08:00  WARN 42213 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-04T02:13:48.702+08:00 DEBUG 42213 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-07-04T02:13:48.850+08:00  INFO 42213 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-04T02:13:48.856+08:00  INFO 42213 --- [main] c.e.s.StudioBooking2Application          : Started StudioBooking2Application in 2.532 seconds (process running for 2.814)
+2025-07-04T02:13:52.902+08:00  INFO 42213 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-04T02:13:52.903+08:00  INFO 42213 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-04T02:13:52.906+08:00  INFO 42213 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-07-04T02:13:52.918+08:00 DEBUG 42213 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/captcha/token
+2025-07-04T02:13:52.938+08:00 DEBUG 42213 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/captcha/token
+2025-07-04T02:13:53.494+08:00 DEBUG 42213 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-04T02:14:05.854+08:00 DEBUG 42213 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2025-07-04T02:14:05.860+08:00 DEBUG 42213 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-07-04T02:14:05.862+08:00 DEBUG 42213 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-07-04T02:14:06.069+08:00 DEBUG 42213 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-04T02:14:06.074+08:00 DEBUG 42213 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/me
+2025-07-04T02:14:06.075+08:00 DEBUG 42213 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/auth/me
+2025-07-04T02:14:06.106+08:00 DEBUG 42213 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/auth/me
+2025-07-04T02:14:06.144+08:00 DEBUG 42213 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/auth/me
+2025-07-04T02:14:06.160+08:00 DEBUG 42213 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/auth/me
+2025-07-04T02:14:06.181+08:00 DEBUG 42213 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/reservations/me
+2025-07-04T02:14:06.182+08:00 DEBUG 42213 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/reservations/me
+2025-07-04T02:14:06.186+08:00 DEBUG 42213 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/reservations/me
+2025-07-04T02:14:08.262+08:00 DEBUG 42213 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/captcha/token
+2025-07-04T02:14:08.263+08:00 DEBUG 42213 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/captcha/token
+2025-07-04T02:14:08.283+08:00 DEBUG 42213 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-04T02:27:21.322+08:00 DEBUG 42213 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/studios
+2025-07-04T02:27:21.326+08:00 DEBUG 42213 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/studios
+2025-07-04T02:27:21.384+08:00 DEBUG 42213 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-04T02:28:39.335+08:00  INFO 42213 --- [RMI TCP Connection(24)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-04T02:28:39.340+08:00  INFO 42213 --- [RMI TCP Connection(24)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-04T02:28:39.342+08:00  INFO 42213 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-04T02:28:39.346+08:00  INFO 42213 --- [RMI TCP Connection(24)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-04T02:28:39.348+08:00  INFO 42213 --- [RMI TCP Connection(24)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-04T02:28:39.352+08:00  INFO 42213 --- [RMI TCP Connection(24)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-04T02:28:43.133+08:00  INFO 42507 --- [main] c.e.s.StudioBooking2Application          : Starting StudioBooking2Application using Java 21.0.6 with PID 42507 (/Users/linyirou/eclipse-projects/studio-booking-2/target/classes started by linyirou in /Users/linyirou/eclipse-projects/studio-booking-2)
+2025-07-04T02:28:43.134+08:00  INFO 42507 --- [main] c.e.s.StudioBooking2Application          : No active profile set, falling back to 1 default profile: "default"
+2025-07-04T02:28:43.446+08:00  INFO 42507 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-04T02:28:43.478+08:00  INFO 42507 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 6 JPA repository interfaces.
+2025-07-04T02:28:43.735+08:00  INFO 42507 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-04T02:28:43.743+08:00  INFO 42507 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-04T02:28:43.743+08:00  INFO 42507 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-04T02:28:43.764+08:00  INFO 42507 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-04T02:28:43.764+08:00  INFO 42507 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 610 ms
+2025-07-04T02:28:43.835+08:00  INFO 42507 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-04T02:28:43.858+08:00  INFO 42507 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-07-04T02:28:43.873+08:00  INFO 42507 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-04T02:28:43.988+08:00  INFO 42507 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-04T02:28:44.000+08:00  INFO 42507 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-04T02:28:44.079+08:00  INFO 42507 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7bdb4f17
+2025-07-04T02:28:44.080+08:00  INFO 42507 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-04T02:28:44.103+08:00  WARN 42507 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-04T02:28:44.104+08:00  WARN 42507 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-04T02:28:44.112+08:00  INFO 42507 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-04T02:28:44.531+08:00  INFO 42507 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-04T02:28:44.591+08:00  INFO 42507 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-04T02:28:44.812+08:00  INFO 42507 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-07-04T02:28:44.831+08:00  INFO 42507 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-04T02:28:45.224+08:00  WARN 42507 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-04T02:28:45.400+08:00 DEBUG 42507 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-07-04T02:28:45.550+08:00  INFO 42507 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-04T02:28:45.555+08:00  INFO 42507 --- [main] c.e.s.StudioBooking2Application          : Started StudioBooking2Application in 2.624 seconds (process running for 2.927)
+2025-07-04T02:33:20.952+08:00  INFO 42507 --- [RMI TCP Connection(15)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-04T02:33:20.955+08:00  INFO 42507 --- [RMI TCP Connection(15)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-04T02:33:20.956+08:00  INFO 42507 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-04T02:33:20.960+08:00  INFO 42507 --- [RMI TCP Connection(15)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-04T02:33:20.961+08:00  INFO 42507 --- [RMI TCP Connection(15)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-04T02:33:20.966+08:00  INFO 42507 --- [RMI TCP Connection(15)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-04T02:33:25.058+08:00  INFO 42581 --- [main] c.e.s.StudioBooking2Application          : Starting StudioBooking2Application using Java 21.0.6 with PID 42581 (/Users/linyirou/eclipse-projects/studio-booking-2/target/classes started by linyirou in /Users/linyirou/eclipse-projects/studio-booking-2)
+2025-07-04T02:33:25.059+08:00  INFO 42581 --- [main] c.e.s.StudioBooking2Application          : No active profile set, falling back to 1 default profile: "default"
+2025-07-04T02:33:25.346+08:00  INFO 42581 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-04T02:33:25.381+08:00  INFO 42581 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 6 JPA repository interfaces.
+2025-07-04T02:33:25.634+08:00  INFO 42581 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-04T02:33:25.642+08:00  INFO 42581 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-04T02:33:25.642+08:00  INFO 42581 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-04T02:33:25.661+08:00  INFO 42581 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-04T02:33:25.661+08:00  INFO 42581 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 584 ms
+2025-07-04T02:33:25.727+08:00  INFO 42581 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-04T02:33:25.755+08:00  INFO 42581 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-07-04T02:33:25.768+08:00  INFO 42581 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-04T02:33:25.883+08:00  INFO 42581 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-04T02:33:25.896+08:00  INFO 42581 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-04T02:33:25.971+08:00  INFO 42581 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7bdb4f17
+2025-07-04T02:33:25.971+08:00  INFO 42581 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-04T02:33:25.994+08:00  WARN 42581 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-04T02:33:25.995+08:00  WARN 42581 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-04T02:33:26.002+08:00  INFO 42581 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-04T02:33:26.394+08:00  INFO 42581 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-04T02:33:26.456+08:00  INFO 42581 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-04T02:33:26.672+08:00  INFO 42581 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-07-04T02:33:26.690+08:00  INFO 42581 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-04T02:33:27.062+08:00  WARN 42581 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-04T02:33:27.239+08:00 DEBUG 42581 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-07-04T02:33:27.388+08:00  INFO 42581 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-04T02:33:27.393+08:00  INFO 42581 --- [main] c.e.s.StudioBooking2Application          : Started StudioBooking2Application in 2.546 seconds (process running for 2.878)
+2025-07-04T02:33:30.093+08:00  INFO 42581 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-04T02:33:30.093+08:00  INFO 42581 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-04T02:33:30.094+08:00  INFO 42581 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-07-04T02:33:30.103+08:00 DEBUG 42581 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/captcha/token
+2025-07-04T02:33:30.118+08:00 DEBUG 42581 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/captcha/token
+2025-07-04T02:33:30.584+08:00 DEBUG 42581 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-04T02:33:38.002+08:00 DEBUG 42581 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2025-07-04T02:33:38.007+08:00 DEBUG 42581 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-07-04T02:33:38.010+08:00 DEBUG 42581 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-07-04T02:33:38.206+08:00 DEBUG 42581 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-04T02:33:38.209+08:00 DEBUG 42581 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/me
+2025-07-04T02:33:38.210+08:00 DEBUG 42581 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/auth/me
+2025-07-04T02:33:38.246+08:00 DEBUG 42581 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/auth/me
+2025-07-04T02:33:38.312+08:00 DEBUG 42581 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/auth/me
+2025-07-04T02:33:38.320+08:00 DEBUG 42581 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/auth/me
+2025-07-04T02:33:38.328+08:00 DEBUG 42581 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/reservations/me
+2025-07-04T02:33:38.329+08:00 DEBUG 42581 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/reservations/me
+2025-07-04T02:33:38.334+08:00 DEBUG 42581 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/reservations/me
+2025-07-04T02:33:42.347+08:00 DEBUG 42581 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/auth/me
+2025-07-04T02:33:42.355+08:00 DEBUG 42581 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/auth/me
+2025-07-04T02:33:42.363+08:00 DEBUG 42581 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/reservations/me
+2025-07-04T02:33:42.371+08:00 DEBUG 42581 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/reservations/me
+2025-07-04T02:33:47.158+08:00 DEBUG 42581 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/me
+2025-07-04T02:33:47.184+08:00 DEBUG 42581 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/auth/me
+2025-07-04T02:33:47.188+08:00 DEBUG 42581 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/auth/me
+2025-07-04T02:33:47.196+08:00 DEBUG 42581 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/reservations/me
+2025-07-04T02:33:47.199+08:00 DEBUG 42581 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/reservations/me
+2025-07-04T02:33:47.205+08:00 DEBUG 42581 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/reservations/me
+2025-07-04T03:38:02.514+08:00  INFO 42581 --- [RMI TCP Connection(75)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-04T03:38:02.522+08:00  INFO 42581 --- [RMI TCP Connection(75)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-04T03:38:02.525+08:00  INFO 42581 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-04T03:38:02.532+08:00  INFO 42581 --- [RMI TCP Connection(75)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-04T03:38:02.536+08:00  INFO 42581 --- [RMI TCP Connection(75)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-04T03:38:02.537+08:00  INFO 42581 --- [RMI TCP Connection(75)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-04T03:38:07.428+08:00  INFO 43647 --- [main] c.e.s.StudioBooking2Application          : Starting StudioBooking2Application using Java 21.0.6 with PID 43647 (/Users/linyirou/eclipse-projects/studio-booking-2/target/classes started by linyirou in /Users/linyirou/eclipse-projects/studio-booking-2)
+2025-07-04T03:38:07.429+08:00  INFO 43647 --- [main] c.e.s.StudioBooking2Application          : No active profile set, falling back to 1 default profile: "default"
+2025-07-04T03:38:07.715+08:00  INFO 43647 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-04T03:38:07.749+08:00  INFO 43647 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 6 JPA repository interfaces.
+2025-07-04T03:38:07.999+08:00  INFO 43647 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-04T03:38:08.007+08:00  INFO 43647 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-04T03:38:08.007+08:00  INFO 43647 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-04T03:38:08.026+08:00  INFO 43647 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-04T03:38:08.026+08:00  INFO 43647 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 574 ms
+2025-07-04T03:38:08.097+08:00  INFO 43647 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-04T03:38:08.121+08:00  INFO 43647 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-07-04T03:38:08.135+08:00  INFO 43647 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-04T03:38:08.250+08:00  INFO 43647 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-04T03:38:08.263+08:00  INFO 43647 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-04T03:38:08.339+08:00  INFO 43647 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77856cc5
+2025-07-04T03:38:08.340+08:00  INFO 43647 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-04T03:38:08.361+08:00  WARN 43647 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-04T03:38:08.362+08:00  WARN 43647 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-04T03:38:08.369+08:00  INFO 43647 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-04T03:38:08.783+08:00  INFO 43647 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-04T03:38:08.848+08:00  INFO 43647 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-04T03:38:09.063+08:00  INFO 43647 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-07-04T03:38:09.081+08:00  INFO 43647 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-04T03:38:09.456+08:00  WARN 43647 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-04T03:38:09.633+08:00 DEBUG 43647 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-07-04T03:38:09.785+08:00  INFO 43647 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-04T03:38:09.791+08:00  INFO 43647 --- [main] c.e.s.StudioBooking2Application          : Started StudioBooking2Application in 2.574 seconds (process running for 2.864)
+2025-07-04T03:38:14.235+08:00  INFO 43647 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-04T03:38:14.235+08:00  INFO 43647 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-04T03:38:14.236+08:00  INFO 43647 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-07-04T03:38:14.246+08:00 DEBUG 43647 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/captcha/token
+2025-07-04T03:38:14.263+08:00 DEBUG 43647 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/captcha/token
+2025-07-04T03:38:14.717+08:00 DEBUG 43647 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-04T03:38:26.519+08:00 DEBUG 43647 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2025-07-04T03:38:26.525+08:00 DEBUG 43647 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-07-04T03:38:26.527+08:00 DEBUG 43647 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-07-04T03:38:26.725+08:00 DEBUG 43647 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-04T03:38:26.729+08:00 DEBUG 43647 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/me
+2025-07-04T03:38:26.733+08:00 DEBUG 43647 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/auth/me
+2025-07-04T03:38:26.763+08:00 DEBUG 43647 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/auth/me
+2025-07-04T03:38:26.811+08:00 DEBUG 43647 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/auth/me
+2025-07-04T03:38:26.815+08:00 DEBUG 43647 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/auth/me
+2025-07-04T03:38:26.834+08:00 DEBUG 43647 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/reservations/me
+2025-07-04T03:38:26.842+08:00 DEBUG 43647 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/reservations/me
+2025-07-04T03:38:26.848+08:00 DEBUG 43647 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/reservations/me
+2025-07-04T03:38:31.519+08:00 DEBUG 43647 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/studios
+2025-07-04T03:38:31.520+08:00 DEBUG 43647 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/studios
+2025-07-04T03:38:31.556+08:00 DEBUG 43647 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-04T03:38:32.567+08:00 DEBUG 43647 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/studios/9
+2025-07-04T03:38:32.569+08:00 DEBUG 43647 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/studios/9
+2025-07-04T03:38:32.572+08:00 DEBUG 43647 --- [http-nio-8080-exec-10] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.studio_booking_2.controller.StudioController.getStudioById(java.lang.Long); target is of class [com.example.studio_booking_2.controller.StudioController]
+2025-07-04T03:38:32.612+08:00 DEBUG 43647 --- [http-nio-8080-exec-10] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.studio_booking_2.controller.StudioController.getStudioById(java.lang.Long); target is of class [com.example.studio_booking_2.controller.StudioController]
+2025-07-04T03:38:32.621+08:00 DEBUG 43647 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-04T03:38:34.249+08:00 DEBUG 43647 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/studios/9
+2025-07-04T03:38:34.251+08:00 DEBUG 43647 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/studios/9
+2025-07-04T03:38:34.253+08:00 DEBUG 43647 --- [http-nio-8080-exec-1] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.studio_booking_2.controller.StudioController.getStudioById(java.lang.Long); target is of class [com.example.studio_booking_2.controller.StudioController]
+2025-07-04T03:38:34.254+08:00 DEBUG 43647 --- [http-nio-8080-exec-1] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.studio_booking_2.controller.StudioController.getStudioById(java.lang.Long); target is of class [com.example.studio_booking_2.controller.StudioController]
+2025-07-04T03:38:34.261+08:00 DEBUG 43647 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/studios/9/available-dates
+2025-07-04T03:38:34.262+08:00 DEBUG 43647 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/studios/9/available-dates
+2025-07-04T03:38:34.265+08:00 DEBUG 43647 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-04T03:38:34.272+08:00 DEBUG 43647 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/studios/9
+2025-07-04T03:38:34.274+08:00 DEBUG 43647 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/studios/9
+2025-07-04T03:38:34.275+08:00 DEBUG 43647 --- [http-nio-8080-exec-3] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.studio_booking_2.controller.StudioController.getStudioById(java.lang.Long); target is of class [com.example.studio_booking_2.controller.StudioController]
+2025-07-04T03:38:34.276+08:00 DEBUG 43647 --- [http-nio-8080-exec-3] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.studio_booking_2.controller.StudioController.getStudioById(java.lang.Long); target is of class [com.example.studio_booking_2.controller.StudioController]
+2025-07-04T03:38:34.280+08:00 DEBUG 43647 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-04T03:38:34.281+08:00 DEBUG 43647 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-04T03:38:39.512+08:00 DEBUG 43647 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/captcha/token
+2025-07-04T03:38:39.513+08:00 DEBUG 43647 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/captcha/token
+2025-07-04T03:38:39.532+08:00 DEBUG 43647 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-04T03:38:48.359+08:00 DEBUG 43647 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/admin/login
+2025-07-04T03:38:48.365+08:00 DEBUG 43647 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/admin/login
+2025-07-04T03:38:48.367+08:00 DEBUG 43647 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/admin/login
+2025-07-04T03:38:48.600+08:00 DEBUG 43647 --- [http-nio-8080-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-07-04T03:38:48.604+08:00 DEBUG 43647 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-04T03:38:48.608+08:00 DEBUG 43647 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/me
+2025-07-04T03:38:48.609+08:00 DEBUG 43647 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/auth/me
+2025-07-04T03:38:48.612+08:00 DEBUG 43647 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/auth/me
+2025-07-04T03:38:48.651+08:00 DEBUG 43647 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/auth/me
+2025-07-04T03:38:48.656+08:00 DEBUG 43647 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/auth/me
+2025-07-04T03:38:48.676+08:00 DEBUG 43647 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/reservations/incoming
+2025-07-04T03:38:48.682+08:00 DEBUG 43647 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/reservations/incoming
+2025-07-04T03:38:48.687+08:00 DEBUG 43647 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/reservations/incoming
+2025-07-04T03:38:48.687+08:00 DEBUG 43647 --- [http-nio-8080-exec-1] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.studio_booking_2.controller.ReservationController.getAllReservationsForOwner(com.example.studio_booking_2.security.CustomUserDetails); target is of class [com.example.studio_booking_2.controller.ReservationController]
+2025-07-04T03:38:48.689+08:00 DEBUG 43647 --- [http-nio-8080-exec-1] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.studio_booking_2.controller.ReservationController.getAllReservationsForOwner(com.example.studio_booking_2.security.CustomUserDetails); target is of class [com.example.studio_booking_2.controller.ReservationController]
+2025-07-04T03:38:53.594+08:00 DEBUG 43647 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/auth/me
+2025-07-04T03:38:53.602+08:00 DEBUG 43647 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/auth/me
+2025-07-04T03:38:53.607+08:00 DEBUG 43647 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/reservations/incoming
+2025-07-04T03:38:53.613+08:00 DEBUG 43647 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/reservations/incoming
+2025-07-04T03:38:53.614+08:00 DEBUG 43647 --- [http-nio-8080-exec-2] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.studio_booking_2.controller.ReservationController.getAllReservationsForOwner(com.example.studio_booking_2.security.CustomUserDetails); target is of class [com.example.studio_booking_2.controller.ReservationController]
+2025-07-04T03:38:53.614+08:00 DEBUG 43647 --- [http-nio-8080-exec-2] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.studio_booking_2.controller.ReservationController.getAllReservationsForOwner(com.example.studio_booking_2.security.CustomUserDetails); target is of class [com.example.studio_booking_2.controller.ReservationController]
+2025-07-04T03:38:55.278+08:00 DEBUG 43647 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/owner/studios
+2025-07-04T03:38:55.281+08:00 DEBUG 43647 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/owner/studios
+2025-07-04T03:38:55.292+08:00 DEBUG 43647 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/owner/studios
+2025-07-04T03:38:55.294+08:00 DEBUG 43647 --- [http-nio-8080-exec-5] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public java.util.List com.example.studio_booking_2.controller.OwnerController.getAllStudiosForOwner(org.springframework.security.core.Authentication); target is of class [com.example.studio_booking_2.controller.OwnerController]
+2025-07-04T03:38:55.294+08:00 DEBUG 43647 --- [http-nio-8080-exec-5] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public java.util.List com.example.studio_booking_2.controller.OwnerController.getAllStudiosForOwner(org.springframework.security.core.Authentication); target is of class [com.example.studio_booking_2.controller.OwnerController]
+2025-07-04T03:38:59.041+08:00 DEBUG 43647 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/owner/studios/12
+2025-07-04T03:38:59.045+08:00 DEBUG 43647 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/owner/studios/12
+2025-07-04T03:38:59.056+08:00 DEBUG 43647 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/owner/studios/12
+2025-07-04T03:38:59.058+08:00 DEBUG 43647 --- [http-nio-8080-exec-7] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.studio_booking_2.controller.OwnerController.getStudioByIdForOwner(java.lang.Long,org.springframework.security.core.Authentication); target is of class [com.example.studio_booking_2.controller.OwnerController]
+2025-07-04T03:38:59.058+08:00 DEBUG 43647 --- [http-nio-8080-exec-7] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.studio_booking_2.controller.OwnerController.getStudioByIdForOwner(java.lang.Long,org.springframework.security.core.Authentication); target is of class [com.example.studio_booking_2.controller.OwnerController]
+2025-07-04T03:39:05.331+08:00 DEBUG 43647 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/captcha/token
+2025-07-04T03:39:05.332+08:00 DEBUG 43647 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/captcha/token
+2025-07-04T03:39:05.352+08:00 DEBUG 43647 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-04T03:39:09.322+08:00  INFO 43647 --- [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-04T03:39:09.325+08:00  INFO 43647 --- [RMI TCP Connection(9)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-04T03:39:09.328+08:00  INFO 43647 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-04T03:39:09.337+08:00  INFO 43647 --- [RMI TCP Connection(9)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-04T03:39:09.340+08:00  INFO 43647 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-04T03:39:09.345+08:00  INFO 43647 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

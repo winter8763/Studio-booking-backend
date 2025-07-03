@@ -24,7 +24,7 @@ public class CustomUserDetails implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-    	System.out.println("🔐 目前登入者角色：" + user.getRole().name());
+    	System.out.println("目前登入者角色：" + user.getRole().name());
         return List.of(new SimpleGrantedAuthority("ROLE_" + user.getRole().name()));
     }
 

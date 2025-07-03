@@ -21,7 +21,7 @@ public class DataInitializer {
 	            paymentRepository.save(new Payment(null, "Apple Pay", PaymentMethod.APPLE_PAY));
 	            paymentRepository.save(new Payment(null, "Google Pay", PaymentMethod.GOOGLE_PAY));
 	            paymentRepository.save(new Payment(null, "銀行轉帳", PaymentMethod.BANK_TRANSFER));
-	            System.out.println("✅ 預設付款方式已寫入資料庫！");
+	            System.out.println("預設付款方式已寫入資料庫！");
 	        }
 		};
 	}

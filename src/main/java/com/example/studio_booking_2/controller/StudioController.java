@@ -39,14 +39,15 @@ public class StudioController {
 	
 	@GetMapping
 	public List<Studio> getPublicStudios() {
-	    return studioRepository.findByIsActiveTrue(); // ✅ 只回傳 isActive=true 的錄音室
+	    return studioRepository.findByIsActiveTrue(); // 只回傳 isActive=true 的錄音室
 	}
 	
 	@GetMapping("/{id}")
 	@PreAuthorize("permitAll()")
 	public ResponseEntity<StudioResponse> getStudioById(@PathVariable Long id) {
-	    System.out.println("✅ 接收到 /api/studios/" + id);
+	    System.out.println("接收到 /api/studios/" + id);
 
+	    // 轉換資料格式
 	    return studioRepository.findById(id)
 	        .map(studio -> {
 	            StudioResponse response = new StudioResponse();

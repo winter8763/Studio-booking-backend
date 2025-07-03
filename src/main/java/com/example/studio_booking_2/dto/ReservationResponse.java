@@ -44,7 +44,7 @@ public class ReservationResponse {
 
     private String userEmail; // 使用者 email（後台看用）
 
-    // ✅ 用 Reservation 自動塞入所有欄位
+    // 用 Reservation 自動塞入所有欄位
     public ReservationResponse(Reservation r) {
         this.id = r.getId();
         this.date = r.getDate();

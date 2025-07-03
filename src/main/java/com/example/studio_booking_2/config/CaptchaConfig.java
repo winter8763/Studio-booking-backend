@@ -11,10 +11,10 @@ import java.util.Properties;
 public class CaptchaConfig {
 
     @Bean
-    public DefaultKaptcha captchaProducer() {
+    public DefaultKaptcha captchaProducer() { //設定驗證碼圖片產生器的樣式與屬性
         Properties props = new Properties();
-        props.setProperty("kaptcha.border", "no");
-        props.setProperty("kaptcha.textproducer.font.color", "black");
+        props.setProperty("kaptcha.border", "no"); 
+        props.setProperty("kaptcha.textproducer.font.color", "black"); 
         props.setProperty("kaptcha.textproducer.char.space", "5");
         props.setProperty("kaptcha.image.width", "150");
         props.setProperty("kaptcha.image.height", "50");

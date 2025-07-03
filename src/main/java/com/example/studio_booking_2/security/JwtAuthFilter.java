@@ -32,9 +32,9 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                                     FilterChain filterChain)
             throws ServletException, IOException {
     	
-    	// 白名單：這些路徑不需要 JWT 驗證
+    	// 如果是登入路徑，不需要驗證 JWT，直接放行
     	String path = request.getServletPath();
-    	System.out.println("🚨 目前請求路徑：" + path); // 印出請求網址路徑
+    	System.out.println("目前請求路徑：" + path);
     	if ("/api/admin/login".equals(path) || "/api/auth/login".equals(path)) {
     	    filterChain.doFilter(request, response);
     	    return;
@@ -51,9 +51,9 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
         String email = null;
         try {
-            email = jwtService.extractEmail(token);
+            email = jwtService.extractEmail(token); //解析出 email
         } catch (Exception e) {
-            System.out.println("❌ JWT 解碼失敗：" + e.getMessage());
+            System.out.println("JWT 解碼失敗：" + e.getMessage());
         }
 
         if (email != null && SecurityContextHolder.getContext().getAuthentication() == null) {
@@ -64,17 +64,17 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                     userDetails, null, userDetails.getAuthorities()
                 );
                 authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-                System.out.println("✅ 權限清單：" + userDetails.getAuthorities());
-                System.out.println("✅ 成功設置 SecurityContextHolder 為：" + email);
+                System.out.println("權限清單：" + userDetails.getAuthorities());
+                System.out.println("成功設置 SecurityContextHolder 為：" + email);
                 SecurityContextHolder.getContext().setAuthentication(authToken);
 
-                System.out.println("✅ 驗證成功，登入使用者：" + email);
+                System.out.println("驗證成功，登入使用者：" + email);
                 
             } else {
-                System.out.println("⚠️ 找不到使用者：" + email);
+                System.out.println("找不到使用者：" + email);
             }
         } else if (email == null) {
-            System.out.println("⚠️ 無法從 JWT 中解析 email");
+            System.out.println("無法從 JWT 中解析 email");
         }
         
         

@@ -98,7 +98,7 @@ public class ReservationController {
         Reservation r = reservationRepository.findById(id)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "預約不存在"));
 
-        // 🔐 確認只有會員本人或 OWNER 可以查看（選用）
+        // 確認只有會員本人或 OWNER 可以查看（選用）
         String email = auth.getName();
         if (!auth.isAuthenticated()) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("尚未登入");

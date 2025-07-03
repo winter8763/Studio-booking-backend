@@ -13,7 +13,6 @@ public class CaptchaService {
     // 保存驗證碼
     public void saveCaptcha(String token, String code) {
         captchaStore.put(token, code.toLowerCase());
-        // 可加入過期處理
     }
 
     // 驗證並刪除

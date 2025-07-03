@@ -32,6 +32,7 @@ public class StudioService {
 	@Autowired
 	private ReservationRepository reservationRepository;
 	
+	// 列出資料庫中所有錄音室（包含停用的）
 	public List<StudioDto> getAllStudiosIncludingInactive() {
 		return studioRepository.findAll().stream()
 				.map(StudioDto::new)
@@ -64,15 +65,15 @@ public class StudioService {
 		return studioRepository.findById(id);
 	}
 	
-	public List<Studio> getStudiosByOwner(Authentication authentication) {
-		String email = authentication.getName();
+	public List<Studio> getStudiosByOwner(Authentication authentication) { //取得目前登入者擁有的所有錄音室
+		String email = authentication.getName(); //取出登入者資訊
 		User owner = userRepository.findByEmail(email)
 				.orElseThrow(() -> new RuntimeException("使用者不存在"));
 		
 		return studioRepository.findByOwner(owner);
 	}
 	
-	public Optional<StudioDto> getStudioByIdForOwner(Long id, String email) {
+	public Optional<StudioDto> getStudioByIdForOwner(Long id, String email) { //根據 ID 取得某間錄音室（DTO）
 	    return studioRepository.findById(id)
 	            .map(StudioDto::new);
 	}
@@ -104,7 +105,7 @@ public class StudioService {
 		
 	}
 	
-	private Studio findOwnedStudio(Long id, Authentication authentication) {
+	private Studio findOwnedStudio(Long id, Authentication authentication) { //確保只有錄音室的擁有者（OWNER）才能操作該錄音室資料
 		Studio studio = studioRepository.findById(id)
 				.orElseThrow(() -> new RuntimeException("Studio not found"));
 	    if (!studio.getOwner().getEmail().equals(authentication.getName())) {
